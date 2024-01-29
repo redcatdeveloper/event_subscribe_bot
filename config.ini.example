@@ -1,0 +1,3 @@
+Token = Bot Token from @BotFather
+
+DebugChannelId = <Channel for output debug info>
