@@ -9,9 +9,9 @@ import (
 )
 
 func main() {
-  conf, err := goconf.NewGoConf("config.ini")
-  if err != nil {
-    log.Panic(err)
+  conf := goconf.NewGoConf()
+  if !conf.LoadFile("config.ini") {
+    log.Panic("Can't load config file")
   }
 
   log.Printf("Usage Token: %s \n", conf.Get("Token"))
